@@ -1,15 +1,13 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
-  # GET /articles
-  # GET /articles.json
+  before_action :authenticate_user!, except: [:index]
+
   def index
     @my_name = "Joao Lucas P Santana"
     @articles = Article.all
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
   def show
   end
 
