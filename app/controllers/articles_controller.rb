@@ -22,24 +22,18 @@ class ArticlesController < ApplicationController
   def edit
   end
 
-  # POST /articles
-  # POST /articles.json
   def create
-    @article = Article.new(article_params)
-
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @article }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    @article = Article.new
+    @article.title = params[:article][:title]
+    @article.content = params[:article][:content]
+    if @article.save
+      redirect_to article_path(@article) 
+    else
+      render :new
     end
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
+
   def update
     respond_to do |format|
       if @article.update(article_params)

@@ -1,0 +1,37 @@
+pt:
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "não é um valor válido"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: %{count} caracteres)"
+        too_short: "é muito curto (mínimo: %{count} caracteres)"
+        wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior do que %{count}"
+        greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+        equal_to: "deve ser igual a %{count}"
+        less_than: "deve ser menor do que %{count}"
+        less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+        record_invalid: "Falha na validação: %{errors}"
+        restrict_dependent_destroy:
+          one: Não é possível apagar o registro porque existen registros dependentes (%{record})
+          many: Não é possível apagar o registro porque existen registros dependentes (%{record})
+    models:
+      article:
+        one: Artigo
+        other: Artigos
+    attributes:
+      article:
+        title: Título
+        content: Conteúdo
+     
